@@ -1,0 +1,39 @@
+.formulario_title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.formulario{
+    margin: auto;
+    border: 1px solid black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 700px;
+}
+
+.formulario_div{
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.formulario_label{
+    display: block;
+}
+
+.formulario_input{
+    width: 90%;
+    padding: 5px;
+}
+
+.formulario_div-buttons{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formulario_button{
+    padding: 5px;
+}
+

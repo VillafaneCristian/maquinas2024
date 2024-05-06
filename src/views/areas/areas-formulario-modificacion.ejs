@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('../partials/links-css-styles-comunes.ejs') %>
+    <%- include ('../partials/formularios-styles.ejs') %>
+
+    <%- include ('../partials/scripts-comunes.ejs') %>
+
+    <title>Edicion de areas</title>
+</head>
+<body>
+
+    <header>
+        
+        <%- include ('../partials/header.ejs') %>
+
+    </header>
+
+    <main>
+
+        <%- include ('../partials/accesosDirecto.ejs') %>
+        <h3 class="formulario_title">EDICIÓN DE AREAS</h3>
+        <form class="formulario" action="">
+            <div class="formulario_div">
+                <label for="codigo" class="formulario_label">CODIGO: </label>
+                <input type="text" class="formulario_input" id="codigo" name="id">
+            </div>
+            <div class="formulario_div">
+                <label for="nombre" class="formulario_label">NOMBRE: </label>
+                <input type="text" class="formulario_input" id="nombre" name="nombre">
+            </div>
+            <div class="formulario_div">
+                <label for="encargado" class="formulario_label">ENCARGADO: </label>
+                <input type="text" class="formulario_input" id="encargado" name="encargado">
+            </div>
+            <div class="formulario_div">
+                <label for="email" class="formulario_label">EMAIL: </label>
+                <input type="email" class="formulario_input" id="email" name="email">
+            </div>
+            <div class="formulario_div">
+                <label for="domicilio" class="formulario_label">DOMICILIO: </label>
+                <input type="text" class="formulario_input" id="domicilio" name="domicilio">
+            </div>
+            <div class="formulario_div">
+                <label for="telefono" class="formulario_label">TELEFONO: </label>
+                <input type="text" class="formulario_input" id="telefono" name="telefono">
+            </div>
+            <div class="formulario_div-buttons">
+                <button class="formulario_button" type="submit">EDITAR</button>
+            </div>
+        </form>
+        
+    </main>
+
+    <footer>
+
+        <%- include ('../partials/footer.ejs') %>
+
+    </footer>
+
+</body>
+</html>

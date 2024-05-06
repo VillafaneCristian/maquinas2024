@@ -1,0 +1,17 @@
+.footer_section{
+    margin: auto;
+    margin-top: 30px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer_section-article{
+    width: 30%;
+}
+
+.footer_section-article img{
+    width: 100%;
+}

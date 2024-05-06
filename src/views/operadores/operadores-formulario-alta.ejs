@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('../partials/links-css-styles-comunes.ejs') %>
+    <%- include ('../partials/formularios-styles.ejs') %>
+
+    <%- include ('../partials/scripts-comunes.ejs') %>
+
+    <title>Alta de operadores</title>
+</head>
+<body>
+
+    <header>
+        
+        <%- include ('../partials/header.ejs') %>
+
+    </header>
+
+    <main>
+        <%- include ('../partials/accesosDirecto.ejs') %>
+        <h3 class="formulario_title">ALTA DE UN OPERADOR</h3>
+        <form action="" class="formulario">
+            <div class="formulario_div">
+                <label for="cuil" class="formulario_label">CUIL:</label>
+                <input type="text" class="formulario_input" name="id" id="cuil" >
+            </div>
+            <div class="formulario_div">
+                <label for="nombre" class="formulario_label">NOMBRE:</label>
+                <input type="text" class="formulario_input" id="nombre" name="nombre">
+            </div>
+            <div class="formulario_div">
+                <label for="apellido" class="formulario_label">APELLIDO:</label>
+                <input type="text" class="formulario_input" id="apellido" name="apellido">
+            </div>
+            <div class="formulario_div">
+                <label for="email" class="formulario_label">EMAIL:</label>
+                <input type="email" class="formulario_input" id="email" name="email">
+            </div>
+            <div class="formulario_div">
+                <label for="password" class="formulario_label">PASSWORD:</label>
+                <input type="password" class="formulario_input" id="password" name="password">
+            </div>
+            <div class="formulario_div-buttons">
+                <button class="formulario_button" type="submit">CREAR</button>
+                <button class="formulario_button" type="reset">BORRAR FORMULARIO</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+
+        <%- include ('../partials/footer.ejs') %>
+
+    </footer>
+    
+</body>
+</html>
