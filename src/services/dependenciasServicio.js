@@ -2,7 +2,11 @@ const db = require ('../database/models/index.js');
 
 module.exports = {
 
-    guardarDependencia(dependenciaData){
+    obtenerDependencias: ()=>{
+        return db.dependencias.findAll(); 
+    },
+
+    guardarDependencia: (dependenciaData) =>{
         db.dependencias.create({
             id: dependenciaData.id,
             nombre: dependenciaData.nombre,

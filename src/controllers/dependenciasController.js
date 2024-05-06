@@ -1,9 +1,13 @@
 const dependenciasServicio = require ('../services/dependenciasServicio.js');
 
+
 module.exports = {
 
     listar: function(req,res){
-        res.render('dependencias/dependencias-listado.ejs'); 
+        dependenciasServicio.obtenerDependencias()
+            .then((listadoDependencias)=>{
+                res.render('dependencias/dependencias-listado.ejs',{listadoDependencias:listadoDependencias})
+            }); 
     },
 
     crear: function (req,res){

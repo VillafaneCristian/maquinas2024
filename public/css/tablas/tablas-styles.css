@@ -1,0 +1,17 @@
+.tabla_titulo{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tabla{
+    margin: auto;
+}
+
+.tabla_encabezado, .tabla_dato{
+    padding: 5px 10px;
+}
+
+
