@@ -2,6 +2,10 @@ const db = require ('../database/models/index.js');
 
 module.exports = {
 
+    obtenerUsuarios: function(){
+        return db.usuarios.findAll();
+    },
+
     guardarUsuario: function (usuarioData){
         db.usuarios.create(
             {
@@ -12,6 +16,14 @@ module.exports = {
                 dependencia_id: usuarioData.dependencia_id
             }
         );
+    },
+
+    eliminarUsuario: function(usuarioId){
+        db.usuarios.destroy({
+            where:{
+                id: usuarioId
+            }
+        });
     }
 
 }

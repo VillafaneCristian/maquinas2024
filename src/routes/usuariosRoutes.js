@@ -10,4 +10,6 @@ router.post('/crear', usuariosController.guardar);
 
 router.get('/editar', usuariosController.editar);
 
+router.delete('/eliminar/:id', usuariosController.eliminar);
+
 module.exports = router;

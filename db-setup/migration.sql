@@ -24,6 +24,5 @@ create table usuarios (
 	apellido varchar(50),
 	email varchar(100),
 	dependencia_id varchar(15),
-	primary key (id),
-	foreign key (dependencia_id) references dependencias (id)	
+	primary key (id)	
 ); 
