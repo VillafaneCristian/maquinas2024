@@ -32,6 +32,7 @@
                     <th class="tabla_encabezado">EMAIL</th>
                     <th class="tabla_encabezado">PISO</th>
                     <th class="tabla_encabezado">LADO</th>
+                    <th class="tabla_encabezado">OBSERVACIONES</th>
                     <th class="tabla_encabezado">EDITAR</th>
                     <th class="tabla_encabezado">ELIMINAR</th>
                 </tr>
@@ -44,8 +45,15 @@
                         <td class="tabla_dato"><%= dependencia.email %> </td>
                         <td class="tabla_dato"><%= dependencia.piso %> </td>
                         <td class="tabla_dato"><%= dependencia.lado %> </td>
-                        <td class="tabla_dato"><i class="fa-solid fa-pen-to-square"></i></td>
-                        <td class="tabla_dato"><i class="fa-solid fa-trash-can"></i></td>
+                        <td class="tabla_dato"><%= dependencia.observaciones %></td>
+                        <td class="tabla_dato">
+                            <a href="/dependencias/editar/<%= dependencia.id %>"><i class="fa-solid fa-pen-to-square"></i></a>                        
+                        </td>
+                        <td class="tabla_dato">
+                            <form action="/dependencias/eliminar/<%= dependencia.id %>?_method=delete" method="post">
+                                <button><i class="fa-solid fa-trash-can"></i></button>
+                            </form>
+                        </td>
                     </tr>
                 <% }) %>
             </tbody>

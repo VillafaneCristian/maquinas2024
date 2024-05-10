@@ -14,6 +14,9 @@ module.exports = (sequelize,DataTypes) => {
         },
         lado:{
             type: DataTypes.STRING
+        }, 
+        observaciones:{
+            type: DataTypes.STRING
         }
     };
 

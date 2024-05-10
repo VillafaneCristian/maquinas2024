@@ -10,7 +10,10 @@ router.get('/crear', dependenciasController.crear);
 router.post('/crear', dependenciasController.guardar);
 
 
-router.get('/editar', dependenciasController.editar); 
+router.get('/editar/:id', dependenciasController.editar); 
+router.put('/editar/:id', dependenciasController.actualizar); 
+
+router.delete('/eliminar/:id', dependenciasController.eliminar); 
 
 
 module.exports = router;

@@ -21,27 +21,32 @@
 
         <%- include ('../partials/accesosDirecto.ejs') %>
 
-        <h3 class="formulario_title">EDICIÓN DE DEPENDENCIA</h3>
-        <form action="" class="formulario">
+        <h3 class="formulario_title">EDICIÓN DE DEPENDENCIA </h3>
+
+        <form class="formulario" action="/dependencias/editar/<%= dependenciaEncontrada.id %>?_method=put" method="post">
             <div class="formulario_div">
                 <label class="formulario_label" for="codigo">CODIGO:</label>
-                <input class="formulario_input" type="text" name="id" id="codigo">
+                <input class="formulario_input" type="text" name="id" id="codigo" value="<%= dependenciaEncontrada.id %>">
             </div>
             <div class="formulario_div">
                 <label class="formulario_label" for="nombre">NOMBRE:</label>
-                <input class="formulario_input" type="text" name="nombre" id="nombre">
+                <input class="formulario_input" type="text" name="nombre" id="nombre" value="<%= dependenciaEncontrada.nombre %>">
             </div>
             <div class="formulario_div">
                 <label class="formulario_label" for="email">EMAIL:</label>
-                <input class="formulario_input" type="text" name="email" id="email">
+                <input class="formulario_input" type="text" name="email" id="email" value="<%= dependenciaEncontrada.email %>">
             </div>
             <div class="formulario_div">
                 <label class="formulario_label" for="piso">PISO:</label>
-                <input class="formulario_input" type="text" name="piso" id="piso">
+                <input class="formulario_input" type="text" name="piso" id="piso" value="<%= dependenciaEncontrada.piso %>">
             </div>
             <div class="formulario_div">
                 <label class="formulario_label" for="lado">LADO:</label>
-                <input class="formulario_input" type="text" name="lado" id="lado">
+                <input class="formulario_input" type="text" name="lado" id="lado" value="<%= dependenciaEncontrada.lado %>">
+            </div>
+            <div class="formulario_div">
+                <label class="formulario_label" for="observaciones">OBSERVACIONES:</label>
+                <textarea class="formulario_input" name="observaciones" id="observaciones"></textarea>
             </div>
             <div class="formulario_div-buttons">
                 <button class="formulario_button" type="submit">EDITAR</button>
