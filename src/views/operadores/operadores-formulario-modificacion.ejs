@@ -22,26 +22,22 @@
     <main>
         <%- include ('../partials/accesosDirecto.ejs') %>
         <h3 class="formulario_title">EDICIÓN DE UN OPERADOR</h3>
-        <form action="" class="formulario">
+        <form class="formulario" action="/operadores/editar/<%= operadorEncontrado.id %>?_method=put" method="post" >
             <div class="formulario_div">
                 <label for="cuil" class="formulario_label">CUIL:</label>
-                <input type="text" class="formulario_input" name="id" id="cuil" >
+                <input type="text" class="formulario_input" name="id" id="cuil" value="<%= operadorEncontrado.id %>">
             </div>
             <div class="formulario_div">
                 <label for="nombre" class="formulario_label">NOMBRE:</label>
-                <input type="text" class="formulario_input" id="nombre" name="nombre">
+                <input type="text" class="formulario_input" id="nombre" name="nombre" value="<%= operadorEncontrado.nombre %>">
             </div>
             <div class="formulario_div">
                 <label for="apellido" class="formulario_label">APELLIDO:</label>
-                <input type="text" class="formulario_input" id="apellido" name="apellido">
+                <input type="text" class="formulario_input" id="apellido" name="apellido" value="<%= operadorEncontrado.apellido %>">
             </div>
             <div class="formulario_div">
                 <label for="email" class="formulario_label">EMAIL:</label>
-                <input type="email" class="formulario_input" id="email" name="email">
-            </div>
-            <div class="formulario_div">
-                <label for="password" class="formulario_label">PASSWORD:</label>
-                <input type="password" class="formulario_input" id="password" name="password">
+                <input type="email" class="formulario_input" id="email" name="email" value="<%= operadorEncontrado.email %>">
             </div>
             <div class="formulario_div-buttons">
                 <button class="formulario_button" type="submit">EDITAR</button>

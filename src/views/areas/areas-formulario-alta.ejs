@@ -20,10 +20,10 @@
     </header>
 
     <main>
-
         <%- include ('../partials/accesosDirecto.ejs') %>
+
         <h3 class="formulario_title">ALTA DE AREAS</h3>
-        <form class="formulario" action="">
+        <form class="formulario" action="/areas/crear" method="post">
             <div class="formulario_div">
                 <label for="codigo" class="formulario_label">CODIGO: </label>
                 <input type="text" class="formulario_input" id="codigo" name="id">
@@ -52,9 +52,6 @@
                 <button class="formulario_button" type="submit">CREAR</button>
                 <button class="formulario_button" type="reset">BORRAR FORMULARIO</button>
             </div>
-
-
-
         </form>
         
     </main>

@@ -6,6 +6,10 @@ module.exports = {
         return db.usuarios.findAll();
     },
 
+    obtenerUsuarioPorId: function(usuarioId){
+        return db.usuarios.findByPk(usuarioId); 
+    },
+
     guardarUsuario: function (usuarioData){
         db.usuarios.create(
             {
@@ -17,6 +21,22 @@ module.exports = {
             }
         );
     },
+
+    actualizarUsuario: function(usuarioId, usuarioData){
+        db.usuarios.update(
+            {
+                id: usuarioData.id,
+                nombre:usuarioData.nombre,
+                apellido: usuarioData.apellido,
+                email: usuarioData.email,
+                dependencia_id: usuarioData.dependencia_id 
+            },
+            {
+                where:{id:usuarioId}
+            }
+        )
+    },
+        
 
     eliminarUsuario: function(usuarioId){
         db.usuarios.destroy({

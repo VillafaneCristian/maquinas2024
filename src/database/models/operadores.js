@@ -1,29 +1,32 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = 'usuarios';
+    let alias = 'operadores'; 
 
     let cols = {
         nombre: {
             type: DataTypes.STRING
         },
-        apellido:{
+        apellido: {
             type: DataTypes.STRING
         },
-        email:{
+        email: {
             type: DataTypes.STRING
         },
-        dependencias_id:{
+        contraseña: {
+            type: DataTypes.STRING
+        },
+        avatar:{
             type: DataTypes.STRING
         }
     };
 
     let config = {
-        tableName: 'usuarios',
+        tablename: 'operadores',
         timestamps: false
     };
 
-    const usuarios = sequelize.define(alias, cols, config);
 
-    return usuarios;
+const operadores = sequelize.define(alias, cols, config); 
+return operadores; 
 
 }

@@ -23,6 +23,15 @@
     display: none;
 }
 
+.header_sectorSuperior-divUsuarioLegueado-avatarYusuario{
+    display: flex;
+    align-items: center;
+}
+
+.header_sectorSuperior-divUsuarioLegueado-avatar{
+    width: 70px;
+}
+
 .header_sectorSuperior-iconoMenuYCopy{
     display: flex;
     align-items: center;

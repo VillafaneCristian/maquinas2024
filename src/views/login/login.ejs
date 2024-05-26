@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('../partials/formularios-styles.ejs') %>
+    <link rel="stylesheet" href="/css/views/login-styles.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <figure class="login_image">
+        <img src="/images/partials/header/logo.jpg" alt="imagen de la pagina de logueo">
+    </figure>
+    <h3 class="formulario_title">ACCESO AL SISTEMA</h3>
+    <form class="formulario" action="">
+        <div class="formulario_div">
+            <label class="formulario_label" for="">USUARIO:</label>
+            <input class="formulario_input" type="text">
+        </div>
+        <div class="formulario_div">
+            <label class="formulario_label" for="">CONTRASEÑA:</label>
+            <input class="formulario_input" type="password">
+        </div>
+        <div class="formulario_div-buttons">
+            <button class="formulario_button">ACCEDER</button>
+        </div>
+    </form>
+</body>
+</html>

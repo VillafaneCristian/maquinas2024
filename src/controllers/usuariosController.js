@@ -19,7 +19,16 @@ module.exports = {
     },
 
     editar: function (req,res){
-        res.render('usuarios/usuarios-formulario-modificacion.ejs');
+        usuariosServicio.obtenerUsuarioPorId(req.params.id)
+            .then((usuarioEncontrado)=>{
+                res.render('usuarios/usuarios-formulario-modificacion.ejs',{usuarioEncontrado: usuarioEncontrado});
+            });
+        
+    },
+
+    actualizar: function(req,res){
+        usuariosServicio.actualizarUsuario(req.params.id, req.body);
+        res.redirect('/usuarios/listar'); 
     },
 
     eliminar: function (req,res){

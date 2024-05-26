@@ -22,7 +22,7 @@
     <main>
         <%- include ('../partials/accesosDirecto.ejs') %>
         <h3 class="formulario_title">ALTA DE UN OPERADOR</h3>
-        <form action="" class="formulario">
+        <form class="formulario" action="/operadores/crear" method="post">
             <div class="formulario_div">
                 <label for="cuil" class="formulario_label">CUIL:</label>
                 <input type="text" class="formulario_input" name="id" id="cuil" >
@@ -40,8 +40,8 @@
                 <input type="email" class="formulario_input" id="email" name="email">
             </div>
             <div class="formulario_div">
-                <label for="password" class="formulario_label">PASSWORD:</label>
-                <input type="password" class="formulario_input" id="password" name="password">
+                <label for="contraseña" class="formulario_label">CONTRASEÑA:</label>
+                <input type="contraseña" class="formulario_input" id="contraseña" name="contraseña">
             </div>
             <div class="formulario_div-buttons">
                 <button class="formulario_button" type="submit">CREAR</button>

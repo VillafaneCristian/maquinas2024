@@ -23,6 +23,30 @@ create table usuarios (
 	nombre varchar(50),
 	apellido varchar(50),
 	email varchar(100),
-	dependencia_id varchar(15),
+	dependencias_id varchar(15),
+	primary key (id)	
+); 
+
+drop table if exists areas;
+
+create table areas (
+	id varchar(15),
+	nombre varchar(150),
+	encargado varchar(100),
+	email varchar(100),
+	domicilio varchar(30),
+	telefono integer,
+	primary key (id)	
+); 
+
+drop table if exists operadores;
+
+create table operadores (
+	id varchar(25),
+	nombre varchar(50),
+	apellido varchar(50),
+	email varchar(100),
+	contraseña varchar(200),
+	avatar varchar(200),
 	primary key (id)	
 ); 

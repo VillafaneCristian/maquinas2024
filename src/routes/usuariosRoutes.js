@@ -8,7 +8,8 @@ router.get('/listar', usuariosController.listar);
 router.get('/crear', usuariosController.crear);
 router.post('/crear', usuariosController.guardar); 
 
-router.get('/editar', usuariosController.editar);
+router.get('/editar/:id', usuariosController.editar);
+router.put('/editar/:id', usuariosController.actualizar);
 
 router.delete('/eliminar/:id', usuariosController.eliminar);
 
