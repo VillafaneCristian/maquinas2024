@@ -1,6 +1,7 @@
 const express = require ('express');
 const path = require ('path');
 const methodOverride = require ('method-override');
+const session = require ('express-session'); 
 const app = express();
 
 /*********** middleware para que express vea a la carpeta public como carpeta de archivos publicos ***************/
@@ -14,6 +15,11 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
+/******************** seteo del middleware express-session **********************/
+app.use(session({
+    secret: 'Its a secret',
+    resave: false
+}));
 
 /*seteo de ejs como template engine y de la carpeta views como la carpeta de contendrá las vistas */
 app.set('view engine','ejs');

@@ -16,14 +16,20 @@
         <img src="/images/partials/header/logo.jpg" alt="imagen de la pagina de logueo">
     </figure>
     <h3 class="formulario_title">ACCESO AL SISTEMA</h3>
-    <form class="formulario" action="">
+    <form class="formulario" action="/login" method="post">
         <div class="formulario_div">
-            <label class="formulario_label" for="">USUARIO:</label>
-            <input class="formulario_input" type="text">
+            <label class="formulario_label" for="">CUIL:</label>
+            <input class="formulario_input" type="text" name="id" value="<%= oldData ? oldData.id : '' %>">
+            <% if (errors && errors.id) { %>
+                <p><%= errors.id.msg %></p>
+            <% } %>
         </div>
         <div class="formulario_div">
             <label class="formulario_label" for="">CONTRASEÑA:</label>
-            <input class="formulario_input" type="password">
+            <input class="formulario_input" type="password" name="contraseña" value="<%= oldData ? oldData.contraseña : '' %>">
+            <% if (errors && errors.contraseña) { %>
+                <p><%= errors.contraseña.msg %></p>
+            <% } %>
         </div>
         <div class="formulario_div-buttons">
             <button class="formulario_button">ACCEDER</button>

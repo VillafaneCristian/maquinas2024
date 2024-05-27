@@ -17,7 +17,7 @@ module.exports = {
                 nombre: usuarioData.nombre,
                 apellido: usuarioData.apellido,
                 email: usuarioData.email,
-                dependencia_id: usuarioData.dependencia_id
+                dependencias_id: usuarioData.dependencias_id
             }
         );
     },
@@ -29,7 +29,7 @@ module.exports = {
                 nombre:usuarioData.nombre,
                 apellido: usuarioData.apellido,
                 email: usuarioData.email,
-                dependencia_id: usuarioData.dependencia_id 
+                dependencias_id: usuarioData.dependencias_id 
             },
             {
                 where:{id:usuarioId}
