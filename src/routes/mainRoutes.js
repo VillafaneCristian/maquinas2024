@@ -9,14 +9,14 @@ const loginRoutes = require ('./loginRoutes.js');
 const operadorLogueado = require ('../middlewares/operador-logueado.js');
 
 
-router.get('/',operadorLogueado, mainController.index); 
+router.get('/', mainController.index); 
 router.post('/logout', mainController.logout);
 
 router.use('/login', loginRoutes);
 router.use('/dependencias', dependenciasRoutes); 
-router.use('/usuarios',operadorLogueado, usuariosRoutes); 
-router.use('/operadores',operadorLogueado, operadoresRoutes); 
-router.use('/areas',operadorLogueado, areasRoutes);
+router.use('/usuarios', usuariosRoutes); 
+router.use('/operadores', operadoresRoutes); 
+router.use('/areas', areasRoutes);
 
 
 module.exports = router;

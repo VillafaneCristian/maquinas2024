@@ -1,4 +1,4 @@
- const {body} = require ('express-validator');
+const {body} = require ('express-validator');
 
 module.exports = [
     body('id').notEmpty().withMessage('El campo cuil no puede estar vacio'),

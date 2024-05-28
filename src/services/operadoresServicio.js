@@ -1,4 +1,5 @@
 const db = require ('../database/models/index.js'); 
+const bcryptjs = require ('bcryptjs'); 
 
 module.exports = {
 
@@ -16,7 +17,7 @@ module.exports = {
             nombre: operadorData.nombre,
             apellido: operadorData.apellido,
             email: operadorData.email,
-            contraseña: operadorData.contraseña,
+            contraseña: bcryptjs.hashSync(operadorData.contraseña,10),
             avatar: 'default.png'         
         });
     },

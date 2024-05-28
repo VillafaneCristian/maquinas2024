@@ -12,8 +12,6 @@ module.exports = {
     },
 
     procesarLogin: function(req,res){
-        req.session.operadorLogueado = req.body;
-        res.send(req.session.operadorLogueado);
+        res.redirect('/'); 
     }
-
 }
