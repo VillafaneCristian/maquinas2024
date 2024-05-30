@@ -10,7 +10,14 @@ module.exports = {
     },
 
     crear: function(req,res){
-        res.render('operadores/operadores-formulario-alta.ejs');
+        const errors = req.session.errors;
+        const oldData = req.session.oldData;
+        req.session.errors = null;
+        req.session.oldData = null;
+        res.render('operadores/operadores-formulario-alta.ejs',{
+            errors: errors ? errors : null,
+            oldData: oldData ? oldData : null
+        });
     },
 
     guardar: function(req,res){

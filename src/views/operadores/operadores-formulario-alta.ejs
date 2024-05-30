@@ -6,6 +6,7 @@
 
     <%- include ('../partials/links-css-styles-comunes.ejs') %>
     <%- include ('../partials/formularios-styles.ejs') %>
+    <%- include ('../partials/validaciones-styles.ejs') %>
 
     <%- include ('../partials/scripts-comunes.ejs') %>
 
@@ -25,23 +26,38 @@
         <form class="formulario" action="/operadores/crear" method="post">
             <div class="formulario_div">
                 <label for="cuil" class="formulario_label">CUIL:</label>
-                <input type="text" class="formulario_input" name="id" id="cuil" >
+                <input type="text" class="formulario_input" name="id" id="cuil" value="<%= oldData ? oldData.id : '' %>">
+                <% if (errors && errors.id) { %>
+                    <p class="copyValidaciones"> <%= errors.id.msg %> </p>
+                <% } %>
             </div>
             <div class="formulario_div">
                 <label for="nombre" class="formulario_label">NOMBRE:</label>
-                <input type="text" class="formulario_input" id="nombre" name="nombre">
+                <input type="text" class="formulario_input" id="nombre" name="nombre" value="<%= oldData ? oldData.nombre : '' %>">
+                <% if (errors && errors.nombre) { %>
+                    <p class="copyValidaciones"> <%= errors.nombre.msg %> </p>
+                <% } %>
             </div>
             <div class="formulario_div">
                 <label for="apellido" class="formulario_label">APELLIDO:</label>
-                <input type="text" class="formulario_input" id="apellido" name="apellido">
+                <input type="text" class="formulario_input" id="apellido" name="apellido" value="<%= oldData ? oldData.apellido : '' %>">
+                <% if (errors && errors.apellido) { %>
+                    <p class="copyValidaciones"> <%= errors.apellido.msg %> </p>
+                <% } %>
             </div>
             <div class="formulario_div">
                 <label for="email" class="formulario_label">EMAIL:</label>
-                <input type="email" class="formulario_input" id="email" name="email">
+                <input type="email" class="formulario_input" id="email" name="email" value="<%= oldData ? oldData.email : '' %>">
+                <% if (errors && errors.email) { %>
+                    <p class="copyValidaciones"> <%= errors.email.msg %> </p>
+                <% } %>
             </div>
             <div class="formulario_div">
                 <label for="contraseña" class="formulario_label">CONTRASEÑA:</label>
-                <input type="contraseña" class="formulario_input" id="contraseña" name="contraseña">
+                <input type="password" class="formulario_input" id="contraseña" name="contraseña">
+                <% if (errors && errors.contraseña) { %>
+                    <p class="copyValidaciones"> <%= errors.contraseña.msg %> </p>
+                <% } %>
             </div>
             <div class="formulario_div-buttons">
                 <button class="formulario_button" type="submit">CREAR</button>
