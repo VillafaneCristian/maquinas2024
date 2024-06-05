@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('../partials/links-css-styles-comunes.ejs') %>
+    <link rel="stylesheet" href="/css/operadores/operadores-perfil-styles.css">
+
+    <%- include ('../partials/scripts-comunes.ejs') %>
+
+    <title>Listado de operadores</title>
+</head>
+<body>
+
+    <header>
+
+        <%- include ('../partials/header.ejs') %>
+
+    </header>
+
+    <main>
+
+        <%- include ('../partials/accesosDirecto.ejs') %>
+
+        <h3 class="operadores-perfil-titulo" class="">EDITAR DE PERFIL DE OPERADOR</h3>
+       
+        <section class="operadores_perfil_section">
+            
+            <article>
+                <picture>
+                    <p>AVATAR ACTUAL: </p>
+                    <img src="/images/operadores/avatars/<%= operadorEncontrado.avatar %>" alt="imagen de perfil del operador">
+                </picture>
+            </article>
+
+            <article>
+                <ul>
+                    <li><p>NOMBRE Y APELLIDO: <%= operadorEncontrado.nombre %> <%= operadorEncontrado.apellido %></p></li>
+                    <li><p>E-MAIL: <%= operadorEncontrado.email %> </p></li>
+                    <li>
+                        <form action="/operadores/perfil/<%= operadorEncontrado.id %>?_method=put" method="post" enctype="multipart/form-data">
+                            <div>
+                                <label for="avatar">Cambiar imagen del avatar: </label>
+                                <input type="file" name="avatar" id="avatar">
+                            </div>
+                            <div>
+                                <button type="submit">EDITAR</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>              
+                
+            </article>
+
+        </section>
+       
+
+    </main>
+
+    <footer>
+        <%- include ('../partials/footer.ejs') %>
+    </footer>
+
+    
+</body>
+</html> 

@@ -19,9 +19,12 @@
             <div class="header_sectorSuperior-divUsuarioLegueado">
                 <div class="header_sectorSuperior-divUsuarioLegueado-avatarYusuario">
                     <figure>
-                        <img  class="header_sectorSuperior-divUsuarioLegueado-avatar" src="/images/operadores/avatars/default.png" alt="vatar">
+                        <img  class="header_sectorSuperior-divUsuarioLegueado-avatar" src="/images/operadores/avatars/<%= locals.operadorLogueado.avatar %>" alt="avatar">
                     </figure>
-                    <p> Hola, Cristian Villafañe</p>
+                    <div>
+                        <p> Hola, <%= locals.operadorLogueado.nombre %> <%= locals.operadorLogueado.apellido %> </p>
+                        <a href="/operadores/perfil/<%= locals.operadorLogueado.id %>">Editar Informacion</a>
+                    </div>
                 </div>
                 <form action="/logout" method="post">
                     <button>SALIR</button>

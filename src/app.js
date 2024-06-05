@@ -4,6 +4,7 @@ const methodOverride = require ('method-override');
 const session = require ('express-session'); 
 const app = express();
 
+
 /*********** middleware para que express vea a la carpeta public como carpeta de archivos publicos ***************/
 const publicPath = path.join(__dirname,'../public');
 app.use(express.static(publicPath));
@@ -18,8 +19,13 @@ app.use(express.json());
 /******************** seteo del middleware express-session **********************/
 app.use(session({
     secret: 'Its a secret',
-    resave: false
+    resave: false,
+    saveUninitialized: false
 }));
+
+/**** middleware donde paso la informacion del usuario logueado como variable local para compartir entre las vistas *****/
+const operadorLogueadoInfo = require ('./middlewares/operador-locals-info.js');
+app.use(operadorLogueadoInfo); 
 
 /*seteo de ejs como template engine y de la carpeta views como la carpeta de contendrá las vistas */
 app.set('view engine','ejs');

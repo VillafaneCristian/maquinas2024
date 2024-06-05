@@ -41,6 +41,18 @@ module.exports = {
     eliminar: function (req,res){
         operadoresServicio.eliminarOperador(req.params.id); 
         res.redirect('/operadores/listar');
+    },
+
+    perfil: function(req,res){
+        operadoresServicio.obtenerOperadorPorId(req.params.id)
+        .then((operadorEncontrado)  => {
+            res.render('operadores/operadores-perfil', {operadorEncontrado: operadorEncontrado});
+        });      
+    },
+
+    editarPerfil: function (req,res){
+        operadoresServicio.actualizarPerfil(req.params.id, req.file.filename);
+        res.redirect('/'); 
     }
 
 }; 

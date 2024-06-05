@@ -37,6 +37,18 @@ module.exports = {
 
     },
 
+    actualizarPerfil: (operadorId, operadorAvatar) => {
+        db.operadores.update(
+            {
+                avatar: operadorAvatar
+            },
+            {
+                where: {id: operadorId}
+            }
+        )
+
+    },
+
     eliminarOperador: (operadorId) =>{
         db.operadores.destroy({
             where: {id: operadorId}
